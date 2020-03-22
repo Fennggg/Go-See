@@ -1,122 +1,158 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
-void main() => runApp(MyApp());
-class MyApp extends StatelessWidget {
-  @override
+import 'package:off_app/T/horizontal_listview.dart';
+import 'package:off_app/T/city.dart';
+
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: HomePage(),
+  ));
+}
+
+class HomePage extends StatefulWidget {
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyHomePage(title: ''),
+    Widget image_carousel = new Container(
+      height: 200.0,
+      child: new Carousel(
+        boxFit: BoxFit.cover,
+        images: [
+          AssetImage('assets/1.jpg'),
+          AssetImage('assets/2.jpeg'),
+          AssetImage('assets/3.jpg'),
+          AssetImage('assets/4.jpg'),
+          AssetImage('assets/5.jpg'),
+          AssetImage('assets/6.jpg'),
+        ],
+        autoplay: false,
+//      animationCurve: Curves.fastOutSlowIn,
+        //    animationDuration: Duration(milliseconds: 1000),
+
+        dotSize: 4.0,
+        indicatorBgPadding: 2.0,
+      ),
     );
-  }
-}
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-
-
-
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: <Widget>[
+      appBar: new AppBar(
 
-
-
-
-
-
-          Padding(
-            padding: EdgeInsets.all(40),
-            child: Text(
-              "Welcome",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.w600,
+        backgroundColor: Colors.red,
+        title: Text('Travel'),
+        actions: <Widget>[
+          new IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+              onPressed: () {}),
+          new IconButton(
+              icon: Icon(
+                Icons.shopping_cart,
+                color: Colors.white,
+              ),
+              onPressed: () {}),
+        ],
+      ),
+      drawer: new Drawer(
+        child: new ListView(
+          children: <Widget>[
+            new UserAccountsDrawerHeader(
+              accountName: Text('Hello'),
+              accountEmail: Text('Hello'),
+              currentAccountPicture: GestureDetector(
+                child: new CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              decoration: new BoxDecoration(
+                color: Colors.purple,
               ),
             ),
-          ),
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                title: Text('Home Page'),
+                leading: Icon(Icons.home),
+              ),
+            ),
+
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                title: Text('My Account'),
+                leading: Icon(Icons.person),
+              ),
+            ),
+
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                title: Text('My Orders'),
+                leading: Icon(Icons.shopping_basket),
+              ),
+            ),
+
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                title: Text('Categories'),
+                leading: Icon(Icons.dashboard),
+              ),
+            ),
+
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                title: Text('Favourties'),
+                leading: Icon(Icons.favorite),
+              ),
+            ),
 
 
+            Divider(),
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                title: Text('Settings'),
+                leading: Icon(Icons.settings),
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                title: Text('About'),
+                leading: Icon(Icons.help),
+              ),
+            ),
+          ],
+        ),
+      ),
+
+      body:  new ListView(
+        children: <Widget>[
+          image_carousel,
+          new Padding(padding: const EdgeInsets.all(10.0),
+            child: new Text('Recent travel'),),
+
+          HorizontalList(),
+
+
+          new Padding(padding: const EdgeInsets.all(10.0),
+            child: new Text('City'),),
 
           Container(
-            alignment: Alignment.center,
-            margin: EdgeInsets.symmetric(horizontal: 20),
-            height: 40,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  offset: Offset(0.0, 4.0),
-                  color: Colors.grey,
-                  blurRadius: 24.0,
-                ),
-              ],
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: TextField(
-                decoration: InputDecoration(
-                    //prefixIcon: Icon(HotelBookingConcept.ic_search),
-                    hintText: "Where you want to go?",
-                    hintStyle:
-                    TextStyle(fontSize: 14),
-                    border: InputBorder.none,
-                    contentPadding: EdgeInsets.symmetric(vertical: 10)),
-              ),
-            ),
-          ),
-
-
-          const SizedBox(height: 30),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                const SizedBox(height: 20),
-                Text("Find your perfect places",
-                    style: TextStyle(
-                        fontSize: 24, color:Colors.grey, )),
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text("Places",
-                        style: TextStyle(
-                            fontSize: 24,
-                            color: Colors.grey,
-                            fontWeight: FontWeight.w600)),
-                    Text("View all",
-                        style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.grey,
-                            fontWeight: FontWeight.w600)),
-                  ],
-                ),
-              ],
-            ),
-          ),
-
-
-
-
-
-
-
-
-          //place
-
-
+            height: 320.0,
+            child: city(),
+          )
         ],
       ),
     );
