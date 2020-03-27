@@ -19,8 +19,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   carousel_pro: ^0.0.13
+  firebase_core: ^0.4.0+9
+  firebase_auth: ^0.14.0+5
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -52,7 +53,19 @@ flutter:
     - assets/4.jpg
     - assets/5.jpg
     - assets/6.jpg
-    - assets/name/disney.jpg
+    - assets/name/beijing.jpg
+    - assets/name/london.jpg
+    - assets/name/newyork.jpg
+    - assets/name/paris.jpg
+    - assets/name/hongkong.jpg
+    - assets/name/shanghai.jpg
+    - assets/hotel/01.jpg
+    - assets/hotel/02.jpg
+    - assets/hotel/03.jpg
+    - assets/hotel/04.jpg
+    - assets/hotel/05.jpg
+    - assets/hotel/06.jpg
+
 
     #  - images/a_dot_ham.jpeg
 
