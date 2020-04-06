@@ -30,14 +30,6 @@ class _CityDetailState extends State<CityDetail> {
           },
           child: Text('Travel'),
         ),
-        actions: <Widget>[
-          new IconButton(
-              icon: Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-              onPressed: () {}),
-        ],
       ),
       body: new ListView(
         children: <Widget>[
@@ -149,11 +141,9 @@ class _CityDetailState extends State<CityDetail> {
                   child: new Text("Book"),
                 ),
               ),
-
-              //new IconButton(icon: Icons(Icons.add_shopping_cart), onPressed: (){})
-              //new IconButton(icon: Icons(Icons.add_shopping_cart), onPressed: (){})
             ],
           ),
+
           Divider(),
           new ListTile(
             title: new Text(
@@ -161,40 +151,110 @@ class _CityDetailState extends State<CityDetail> {
               style: TextStyle(color: Colors.black87),
             ),
             subtitle: new Text(
-                "Being capital of the People's Republic of China, Beijing is the nation's political, economic, and cultural center. "
-                "Located in north China, close to the port city of Tianjin and partially surrounded by Hebei Province, it also serves as the most "
-                "important transportation hub and port of entry.As one of the six ancient cities in China, Beijing has been the heart and soul of "
-                "politics throughout its long history and consequently there is an unparalleled wealth of discovery to delight and intrigue travelers"
-                " as they explore the city's ancient past and exciting modern development. Now it has become one of the most popular travel destinations"
-                " in the world, with about 140 million Chinese tourists and 4.4 million international visitors in a year."),
+                "Beijing, China’s sprawling capital, has history stretching back 3 millennia. "
+                    "Yet it’s known as much for modern architecture as its ancient sites such as the grand Forbidden City complex,"
+                    " the imperial palace during the Ming and Qing dynasties. "
+                    "Nearby, the massive Tiananmen Square pedestrian plaza is the site of Mao Zedong’s "
+                    "mausoleum and the National Museum of China, displaying a vast collection of cultural relics."),
           ),
+
           Divider(),
           new ListTile(
-            title: new Text(
-              "Things to do in Beijing",
-              style: TextStyle(color: Colors.black87),
-            ),
             subtitle: new Text(
-                "Great Wall  Fordden City  Tiananmen Square  Summer Palace  National Stadium  Temple of Heaven"),
+                "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, "
+                    "from neon-lit skyscrapers to historic temples."
+                    " The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods."
+                    " The Imperial Palace sits amid large public gardens. "
+                    "The city's many museums offer exhibits ranging from classical art "
+                    "(in the Tokyo National Museum) to a reconstructed kabuki theater"),
           ),
+
           Divider(),
           new ListTile(
-            title: new Text(
-              "Dining",
-              style: TextStyle(color: Colors.black87),
-            ),
             subtitle: new Text(
-                "The Roast Duck and the Imperial Court Food are highly recommended. Nowhere else on earth will you find such a variety of gourmet restaurants offering the very best of Chinese and western dishes."),
+                "London, the capital of England and the United Kingdom,"
+                    "is a 21st-century city with history stretching back to Roman times. "
+                    "At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock tower and Westminster Abbey, "
+                    "site of British monarch coronations. Across the Thames River, "
+                    "the London Eye observation wheel provides panoramic views of the South Bank cultural complex, and the entire city."),
           ),
+
           Divider(),
           new ListTile(
-            title: new Text(
-              "Shopping",
-              style: TextStyle(color: Colors.black87),
-            ),
             subtitle: new Text(
-                "The most famous and popular shopping destinations are the Yansha and Guomao Shopping Malls, Xidan Street and streets near Tiananmen Square such as  the Wangfujing and Qianmen Streets."),
+                "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. "
+                    "At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, "
+                    "financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building "
+                    "and sprawling Central Park. Broadway theater is staged in neon-lit Times Square."),
           ),
+
+          Divider(),
+          new ListTile(
+            subtitle: new Text(
+                "Shanghai, on China’s central coast, is the country's biggest city and a global financial hub."
+                    " Its heart is the Bund, a famed waterfront promenade lined with colonial-era buildings."
+                    " Across the Huangpu River rises the Pudong district’s futuristic skyline,"
+                    " including 632m Shanghai Tower and the Oriental Pearl TV Tower, with distinctive pink spheres."
+                    " Sprawling Yu Garden has traditional pavilions, towers and ponds."),
+          ),
+
+
+          Divider(),
+          new ListTile(
+            subtitle: new Text(
+                "Hong Kong is an autonomous territory, and former British colony, in southeastern China. "
+                    "Its vibrant, densely populated urban centre is a major port and"
+                    " global financial hub with a skyscraper-studded skyline. "
+                    "Central features architectural landmarks like I.M. Pei’s Bank of China Tower. "
+                    "Hong Kong is also a major shopping destination, famed for bespoke tailors and Temple Street Night Market."),
+          ),
+
+          Divider(),
+          new ListTile(
+            subtitle: new Text(
+                "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. "
+                    "Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. "
+                    "Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, "
+                    "the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré."),
+          ),
+
+
+          Divider(),
+          new ListTile(
+            subtitle: new Text(
+                "Milan, a metropolis in Italy's northern Lombardy region,"
+                    " is a global capital of fashion and design. "
+                    "Home to the national stock exchange, "
+                    "it’s a financial hub also known for its high-end restaurants and shops. "
+                    "The Gothic Duomo di Milano cathedral and the Santa Maria delle Grazie convent, "
+                    "housing Leonardo da Vinci’s mural “The Last Supper,” testify to centuries of art and culture."),
+          ),
+
+
+          Divider(),
+          new ListTile(
+            subtitle: new Text(
+                "Amsterdam is the Netherlands’ capital, known for its artistic heritage, "
+                    "elaborate canal system and narrow houses with gabled facades, "
+                    "legacies of the city’s 17th-century Golden Age. "
+                    "Its Museum District houses the Van Gogh Museum, "
+                    "works by Rembrandt and Vermeer at the Rijksmuseum, "
+                    "and modern art at the Stedelijk. Cycling is key to the city’s character, "
+                    "and there are numerous bike paths."),
+          ),
+
+
+          Divider(),
+          new ListTile(
+            subtitle: new Text(
+                "Toronto, the capital of the province of Ontario, "
+                    "is a major Canadian city along Lake Ontario’s northwestern shore. "
+                    "It's a dynamic metropolis with a core of soaring skyscrapers, "
+                    "all dwarfed by the iconic, free-standing CN Tower. Toronto also has many green spaces, "
+                    "from the orderly oval of Queen’s Park to 400-acre High Park and its trails, sports facilities and zoo."),
+          ),
+
+
           Divider(),
           new ListTile(
             title: new Text(
@@ -202,6 +262,7 @@ class _CityDetailState extends State<CityDetail> {
               style: TextStyle(color: Colors.black87),
             ),
           ),
+
           Container(
             height: 360.0,
             child: city(),
@@ -221,12 +282,16 @@ class city extends StatefulWidget {
 
 class _cityState extends State<city> {
   var city_list = [
-    {"name": "Beijing", "picture": "assets/name/beijing.jpg", "price": "240"},
-    {"name": "London", "picture": "assets/name/london.jpg", "price": "290"},
-    {"name": "New York", "picture": "assets/name/newyork.jpg", "price": "320"},
-    {"name": "Shanghai", "picture": "assets/name/shanghai.jpg", "price": "230"},
-    {"name": "Hongkong", "picture": "assets/name/hongkong.jpg", "price": "200"},
-    {"name": "Paris", "picture": "assets/name/paris.jpg", "price": "300"},
+    {"name": "Beijing", "picture": "assets/name/beijing.jpg", "price": "300"},
+    {"name": "Toyko", "picture": "assets/name/tokyo.jpg", "price": "330"},
+    {"name": "New York", "picture": "assets/name/newyork.jpg", "price": "360"},
+    {"name": "Shanghai", "picture": "assets/name/shanghai.jpg", "price": "290"},
+    {"name": "Hongkong", "picture": "assets/name/hongkong.jpg", "price": "270"},
+    {"name": "Paris", "picture": "assets/name/paris.jpg", "price": "410"},
+    {"name": "Milan", "picture": "assets/name/milan.jpg", "price": "340"},
+    {"name": "Amsterdam", "picture": "assets/name/amsterdam.jpg", "price": "400"},
+    {"name": "London", "picture": "assets/name/london.jpg", "price": "400"},
+    {"name": "Toronto", "picture": "assets/name/toronto.jpg", "price": "350"},
   ];
 
   @override

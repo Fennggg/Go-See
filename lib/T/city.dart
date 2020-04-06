@@ -9,11 +9,15 @@ class city extends StatefulWidget {
 class _cityState extends State<city> {
   var city_list = [
     {"name": "Beijing", "picture": "assets/name/beijing.jpg", "price": "240"},
+    {"name": "Toyko", "picture": "assets/name/tokyo.jpg", "price": "330"},
     {"name": "London", "picture": "assets/name/london.jpg", "price": "290"},
     {"name": "New York", "picture": "assets/name/newyork.jpg", "price": "320"},
     {"name": "Shanghai", "picture": "assets/name/shanghai.jpg", "price": "230"},
     {"name": "Hongkong", "picture": "assets/name/hongkong.jpg", "price": "200"},
     {"name": "Paris", "picture": "assets/name/paris.jpg", "price": "300"},
+    {"name": "Milan", "picture": "assets/name/milan.jpg", "price": "270"},
+    {"name": "Amsterdam", "picture": "assets/name/amsterdam.jpg", "price": "300"},
+    {"name": "Toronto", "picture": "assets/name/toronto.jpg", "price": "350"},
   ];
 
   @override

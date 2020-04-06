@@ -17,10 +17,6 @@ class HorizontalList extends StatelessWidget {
             image_caption: '2',
           ),
           Category(
-            image_location: 'assets/hotel/03.jpg',
-            image_caption: '3',
-          ),
-          Category(
             image_location: 'assets/hotel/04.jpg',
             image_caption: '4',
           ),

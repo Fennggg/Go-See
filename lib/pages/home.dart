@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:off_app/T/horizontal_listview.dart';
 import 'package:off_app/T/city.dart';
+import 'package:off_app/pages/about.dart';
 import 'package:off_app/pages/flight.dart';
+import 'package:off_app/pages/hotel.dart';
 
 class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
@@ -16,11 +18,13 @@ class _HomePageState extends State<HomePage> {
         boxFit: BoxFit.cover,
         images: [
           AssetImage('assets/1.jpg'),
-          AssetImage('assets/2.jpeg'),
+          AssetImage('assets/2.jpg'),
           AssetImage('assets/3.jpg'),
           AssetImage('assets/4.jpg'),
           AssetImage('assets/5.jpg'),
           AssetImage('assets/6.jpg'),
+          AssetImage('assets/7.jpg'),
+          AssetImage('assets/8.jpg'),
         ],
         autoplay: false,
         dotSize: 4.0,
@@ -31,15 +35,11 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.red,
-        title: Text('Travel'),
+        backgroundColor: Colors.black,
+        title: Text('Perfect places️'),
         actions: <Widget>[
-          new IconButton(
-              icon: Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-              onPressed: () {}),
+
+
           new IconButton(
               icon: Icon(
                 Icons.flight,
@@ -49,34 +49,22 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => new flight()));
               }),
+
+
+          new IconButton(
+              icon: Icon(
+                Icons.hotel,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => new hotel()));
+              }),
         ],
       ),
       drawer: new Drawer(
         child: new ListView(
           children: <Widget>[
-            new UserAccountsDrawerHeader(
-              accountName: Text('Welcome',
-                  style: TextStyle(
-                      color: Colors.black87,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30.0)),
-              //accountEmail: Text('Hello'),
-              currentAccountPicture: GestureDetector(
-                child: new CircleAvatar(
-                  backgroundColor: Colors.grey,
-
-                  //child: Icon(
-                  // Icons.person,
-                  // color: Colors.white,
-                  // ),
-                ),
-              ),
-
-              //decoration: new BoxDecoration(
-              // color: Colors.blue,
-              // borderRadius: BorderRadius.circular(12),
-              // ),
-            ),
             InkWell(
               onTap: () {},
               child: ListTile(
@@ -86,10 +74,13 @@ class _HomePageState extends State<HomePage> {
             ),
 
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => new hotel()));
+              },
               child: ListTile(
-                title: Text('My Account'),
-                leading: Icon(Icons.person, color: Colors.green),
+                title: Text('My Hotel'),
+                leading: Icon(Icons.hotel, color: Colors.green),
               ),
             ),
 
@@ -99,37 +90,17 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => new flight()));
               },
               child: ListTile(
-                title: Text('Flight'),
-                leading: Icon(Icons.flight, color: Colors.green),
-              ),
-            ),
-
-            // InkWell(
-            //  onTap: () {},
-            //  child: ListTile(
-            //    title: Text('Categories'),
-            //    leading: Icon(Icons.dashboard),
-            //  ),
-            // ),
-
-            InkWell(
-              onTap: () {},
-              child: ListTile(
-                title: Text('Favourties'),
-                leading: Icon(Icons.favorite, color: Colors.green),
-              ),
-            ),
-
+               title: Text('My Flight'),
+               leading: Icon(Icons.flight, color: Colors.green),
+             ),
+             ),
             Divider(),
+
             InkWell(
-              onTap: () {},
-              child: ListTile(
-                title: Text('Settings'),
-                leading: Icon(Icons.settings, color: Colors.blue),
-              ),
-            ),
-            InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => new about()));
+              },
               child: ListTile(
                 title: Text('About'),
                 leading: Icon(Icons.help, color: Colors.green),
@@ -138,7 +109,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-
       body: new ListView(
         children: <Widget>[
           image_carousel,
@@ -167,24 +137,6 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-
-      //  bottomNavigationBar: BottomNavigationBar(
-      // currentIndex: 0, // this will be set when a new tab is tapped
-      // items: [
-      //  BottomNavigationBarItem(
-      //   icon: new Icon(Icons.home),
-      //   title: new Text(''),
-      // ),
-      // BottomNavigationBarItem(
-      //   icon: new Icon(Icons.image),
-      //    title: new Text(''),
-      // ),
-      // BottomNavigationBarItem(
-      //      icon: Icon(Icons.person),
-      //      title: Text('')
-      //   )
-      //  ],
-      // ),
     );
   }
 }

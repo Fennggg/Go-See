@@ -1,30 +1,25 @@
 import 'package:flutter/material.dart';
 
-class flight_checkout extends StatefulWidget {
+class hotel_checkout extends StatefulWidget {
   @override
-  _flight_checkoutState createState() => _flight_checkoutState();
+  _hotel_checkoutState createState() => _hotel_checkoutState();
 }
 
-class _flight_checkoutState extends State<flight_checkout> {
-  var flight_check_out = [
+class _hotel_checkoutState extends State<hotel_checkout> {
+  var hotel_check_out = [
     {
       "name": "Beijing",
       "picture": "assets/name/beijing.jpg",
-      "price": "1240",
+      "price": "240",
       "date": "12/25/2020"
     },
-    //{
-    //  "name": "London",
-    //  "picture": "assets/name/london.jpg",
-    //  "price": "290",
-    //  "date": "12/02/2020"
-    //},
-    //{
-     // "name": "New York",
-     // "picture": "assets/name/newyork.jpg",
-     //"price": "320"
-    //  "date" "12/02/2020"
-    //},
+    {
+      "name": "London",
+      "picture": "assets/name/london.jpg",
+      "price": "290",
+      "date": "12/30/2020"
+    },
+    //{"name": "New York", "picture": "assets/name/newyork.jpg", "price": "320"},
     //{"name": "Shanghai", "picture": "assets/name/shanghai.jpg", "price": "230"},
     //{"name": "Hongkong", "picture": "assets/name/hongkong.jpg", "price": "200"},
     //{"name": "Paris", "picture": "assets/name/paris.jpg", "price": "300"},
@@ -33,13 +28,13 @@ class _flight_checkoutState extends State<flight_checkout> {
   @override
   Widget build(BuildContext context) {
     return new ListView.builder(
-        itemCount: flight_check_out.length,
+        itemCount: hotel_check_out.length,
         itemBuilder: (context, index) {
           return Single_flight_city(
-            city_name: flight_check_out[index]["name"],
-            city_price: flight_check_out[index]["price"],
-            city_picture: flight_check_out[index]["picture"],
-            city_date: flight_check_out[index]["date"],
+            city_name: hotel_check_out[index]["name"],
+            city_price: hotel_check_out[index]["price"],
+            city_picture: hotel_check_out[index]["picture"],
+            city_date: hotel_check_out[index]["date"],
 
             //flight_check_out_name: flight_check_out[index]["name"],
           );
@@ -83,7 +78,7 @@ class Single_flight_city extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child:
-                      new Text(city_date, style: TextStyle(color: Colors.blue)),
+                  new Text(city_date, style: TextStyle(color: Colors.blue)),
                 ),
               ],
             ),
