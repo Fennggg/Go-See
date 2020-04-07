@@ -5,6 +5,7 @@ class flight_checkout extends StatefulWidget {
   _flight_checkoutState createState() => _flight_checkoutState();
 }
 
+
 class _flight_checkoutState extends State<flight_checkout> {
   var flight_check_out = [
     {

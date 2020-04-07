@@ -5,6 +5,7 @@ class hotel_checkout extends StatefulWidget {
   _hotel_checkoutState createState() => _hotel_checkoutState();
 }
 
+
 class _hotel_checkoutState extends State<hotel_checkout> {
   var hotel_check_out = [
     {

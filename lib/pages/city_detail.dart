@@ -294,6 +294,7 @@ class _cityState extends State<city> {
     {"name": "Toronto", "picture": "assets/name/toronto.jpg", "price": "350"},
   ];
 
+
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -307,6 +308,8 @@ class _cityState extends State<city> {
             city_price: city_list[index]['price'],
           );
         });
+
+
   }
 }
 

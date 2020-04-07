@@ -6,6 +6,7 @@ class city extends StatefulWidget {
   _cityState createState() => _cityState();
 }
 
+
 class _cityState extends State<city> {
   var city_list = [
     {"name": "Beijing", "picture": "assets/name/beijing.jpg", "price": "240"},
