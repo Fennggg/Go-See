@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "874256299527",
+    "firebase_url": "https://offtravel-b6c23.firebaseio.com",
+    "project_id": "offtravel-b6c23",
+    "storage_bucket": "offtravel-b6c23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874256299527:android:64a9027a14430d55865ca2",
+        "android_client_info": {
+          "package_name": "com.example.off_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874256299527-g4jkvmtcpeof7qjvkk6ng2hokbtc34on.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzPPpElTryqxqPC5rYdwRJ8AY816nSW9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874256299527-g4jkvmtcpeof7qjvkk6ng2hokbtc34on.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
