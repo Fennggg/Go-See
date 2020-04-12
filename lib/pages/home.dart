@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:off_app/T/horizontal_listview.dart';
-import 'package:off_app/T/city.dart';
 import 'package:off_app/pages/about.dart';
+import 'package:off_app/pages/city_detail.dart';
 import 'package:off_app/pages/flight.dart';
 import 'package:off_app/pages/hotel.dart';
+import 'package:off_app/user/auth.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
-
 
 class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
@@ -34,13 +35,13 @@ class _HomePageState extends State<HomePage> {
       ),
     );
 
+    final authProvider = Provider.of<AuthProvider>(context);
+
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.black,
-        title: Text('Perfect places️'),
+        backgroundColor: Colors.blue,
+        title: Text('Perfect Life Time️'),
         actions: <Widget>[
-
-
           new IconButton(
               icon: Icon(
                 Icons.flight,
@@ -50,8 +51,6 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => new flight()));
               }),
-
-
           new IconButton(
               icon: Icon(
                 Icons.hotel,
@@ -67,36 +66,26 @@ class _HomePageState extends State<HomePage> {
         child: new ListView(
           children: <Widget>[
             InkWell(
-              onTap: () {},
-              child: ListTile(
-                title: Text('Home Page'),
-                leading: Icon(Icons.home, color: Colors.green),
-              ),
-            ),
-
-            InkWell(
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => new hotel()));
               },
               child: ListTile(
-                title: Text('My Hotel'),
+                title: Text('Hotels'),
                 leading: Icon(Icons.hotel, color: Colors.green),
               ),
             ),
-
             InkWell(
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => new flight()));
               },
               child: ListTile(
-               title: Text('My Flight'),
-               leading: Icon(Icons.flight, color: Colors.green),
-             ),
-             ),
+                title: Text('Flights'),
+                leading: Icon(Icons.flight, color: Colors.green),
+              ),
+            ),
             Divider(),
-
             InkWell(
               onTap: () {
                 Navigator.push(context,
@@ -105,6 +94,16 @@ class _HomePageState extends State<HomePage> {
               child: ListTile(
                 title: Text('About'),
                 leading: Icon(Icons.help, color: Colors.green),
+              ),
+            ),
+            Divider(),
+            InkWell(
+              onTap: () async {
+                authProvider.signOut();
+              },
+              child: ListTile(
+                title: Text('SignOut'),
+                leading: Icon(Icons.person, color: Colors.green),
               ),
             ),
           ],

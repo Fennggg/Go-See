@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:off_app/user/auth.dart';
+import 'package:off_app/user/login.dart';
+import 'package:provider/provider.dart';
 import 'package:off_app/pages/home.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: HomePage(),
-  ));
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider.value(value: AuthProvider.initialize())
+      ],
+      child: MaterialApp(
+          debugShowCheckedModeBanner: false, home: ScreensController())));
 }
 
+class ScreensController extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final auth = Provider.of<AuthProvider>(context);
+    switch (auth.status) {
+      case Status.Authenticating:
+        return Login();
+      default:
+        //return Login();
+        return HomePage();
+    }
+  }
+}

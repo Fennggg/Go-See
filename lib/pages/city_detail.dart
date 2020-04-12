@@ -22,13 +22,13 @@ class _CityDetailState extends State<CityDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.teal,
         title: InkWell(
           onTap: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => new HomePage()));
           },
-          child: Text('Travel'),
+          child: Text('Explore The World'),
         ),
       ),
       body: new ListView(
@@ -64,85 +64,7 @@ class _CityDetailState extends State<CityDetail> {
               ),
             ),
           ),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) {
-                          return new AlertDialog(
-                            title: new Text("Date"),
-                            content: new Text("Choose the date"),
-                            actions: <Widget>[
-                              new MaterialButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop(context);
-                                },
-                                child: new Text("close"),
-                              ),
-                            ],
-                          );
-                        });
-                  },
-                  color: Colors.white,
-                  textColor: Colors.grey,
-                  elevation: 0.2,
-                  child: Row(
-                    children: <Widget>[
-                      Expanded(child: new Text("DATE")),
-                      Expanded(child: new Icon(Icons.arrow_drop_down)),
-                    ],
-                  ),
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) {
-                          return new AlertDialog(
-                            title: new Text("Date"),
-                            content: new Text("Choose the date"),
-                            actions: <Widget>[
-                              new MaterialButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop(context);
-                                },
-                                child: new Text("close"),
-                              ),
-                            ],
-                          );
-                        });
-                  },
-                  color: Colors.white,
-                  textColor: Colors.grey,
-                  elevation: 0.2,
-                  child: Row(
-                    children: <Widget>[
-                      Expanded(child: new Text("DATE")),
-                      Expanded(child: new Icon(Icons.arrow_drop_down)),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {},
-                  color: Colors.red,
-                  textColor: Colors.white,
-                  elevation: 0.2,
-                  child: new Text("Book"),
-                ),
-              ),
-            ],
-          ),
+
 
           Divider(),
           new ListTile(
@@ -354,18 +276,6 @@ class Single_city extends StatelessWidget {
                       )
                     ],
                   ),
-
-                  //child: ListTile(
-                  //  leading: Text(
-                  //    city_name,
-                  //    style: TextStyle(fontWeight: FontWeight.bold),
-                  //  ),
-                  //  title: Text(
-                  //   "\$$city_price",
-                  //    style: TextStyle(
-                  //        color: Colors.red, fontWeight: FontWeight.w800),
-                  //  ),
-                  // ),
                 ),
                 child: Image.asset(
                   city_picture,

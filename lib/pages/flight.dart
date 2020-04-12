@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:off_app/T/flight_checkout.dart';
+import 'package:off_app/T/all_flight.dart';
 import 'package:off_app/pages/hotel.dart';
 
 class flight extends StatefulWidget {
@@ -7,14 +7,13 @@ class flight extends StatefulWidget {
   _flightState createState() => _flightState();
 }
 
-
 class _flightState extends State<flight> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.black,
-        title: Text('My Flight'),
+        backgroundColor: Colors.lightGreen,
+        title: Text('Flights'),
         actions: <Widget>[
           new IconButton(
               icon: Icon(
@@ -27,31 +26,7 @@ class _flightState extends State<flight> {
               }),
         ],
       ),
-      body: new flight_checkout(),
-
-      bottomNavigationBar: new Container(
-        color: Colors.white,
-        child: Row(
-          children: <Widget>[
-            Expanded(
-              child: ListTile(
-                title: new Text("Total: 1240"),
-              ),
-            ),
-            // Expanded(
-            //     child: new MaterialButton(
-            //      onPressed: () {},
-            //       child: new Text(
-            //        "Check out",
-            //        style: TextStyle(color: Colors.white),
-            //      ),
-            //      color: Colors.blue,
-            //    )),
-          ],
-        ),
-      ),
-
-
+      body: new all_flight(),
     );
   }
 }

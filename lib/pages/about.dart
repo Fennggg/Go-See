@@ -5,13 +5,12 @@ class about extends StatefulWidget {
   _aboutState createState() => _aboutState();
 }
 
-
 class _aboutState extends State<about> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.lightGreen,
         title: Text('About'),
         actions: <Widget>[
           new IconButton(

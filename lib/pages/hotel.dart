@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:off_app/T/all_hotel.dart';
 import 'package:off_app/pages/flight.dart';
-import 'package:off_app/T/hotel_checkout.dart';
 
 class hotel extends StatefulWidget {
   @override
@@ -13,8 +13,8 @@ class _hotelState extends State<hotel> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.black,
-        title: Text('My Hotel'),
+        backgroundColor: Colors.lightGreen,
+        title: Text('Hotels'),
         actions: <Widget>[
           new IconButton(
               icon: Icon(
@@ -27,23 +27,7 @@ class _hotelState extends State<hotel> {
               }),
         ],
       ),
-
-      body: new hotel_checkout(),
-
-      bottomNavigationBar: new Container(
-        color: Colors.white,
-        child: Row(
-          children: <Widget>[
-            Expanded(
-              child: ListTile(
-                title: new Text("Total: 530"),
-              ),
-            ),
-          ],
-        ),
-      ),
-
-
+      body: new all_hotel(),
     );
   }
 }
