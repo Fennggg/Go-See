@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-import 'package:off_app/struture/listview.dart';
+import 'package:off_app/structure/listview.dart';
 import 'package:off_app/screens/about.dart';
 import 'package:off_app/screens/city_detail.dart';
-import 'package:off_app/struture/flight.dart';
-import 'package:off_app/struture/hotel.dart';
+import 'package:off_app/structure/flight.dart';
+import 'package:off_app/structure/hotel.dart';
 import 'package:off_app/user/authentication.dart';
 import 'package:provider/provider.dart';
 

@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:off_app/struture/all_hotel.dart';
-import 'package:off_app/struture/flight.dart';
+import 'package:off_app/structure/all_flight.dart';
+import 'package:off_app/structure/hotel.dart';
 
-class hotel extends StatefulWidget {
+class flight extends StatefulWidget {
   @override
-  _hotelState createState() => _hotelState();
+  _flightState createState() => _flightState();
 }
 
-class _hotelState extends State<hotel> {
+class _flightState extends State<flight> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.lightGreen,
-        title: Text('Hotels'),
+        title: Text('Flights'),
         actions: <Widget>[
           new IconButton(
               icon: Icon(
-                Icons.flight,
+                Icons.hotel,
                 color: Colors.white,
               ),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => new flight()));
+                    MaterialPageRoute(builder: (context) => new hotel()));
               }),
         ],
       ),
-      body: new all_hotel(),
+      body: new all_flight(),
     );
   }
 }
