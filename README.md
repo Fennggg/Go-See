@@ -1,4 +1,4 @@
-# off_app
+# Go See Flutter App
 
 This is a travel guide app. 
 Make it easy to search for different cities. 
