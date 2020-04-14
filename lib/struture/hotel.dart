@@ -7,7 +7,6 @@ class hotel extends StatefulWidget {
   _hotelState createState() => _hotelState();
 }
 
-
 class _hotelState extends State<hotel> {
   @override
   Widget build(BuildContext context) {

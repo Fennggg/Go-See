@@ -20,7 +20,7 @@ class _LoginState extends State<Login> {
       key: _key,
       backgroundColor: Colors.white,
       body: authProvider.status == Status.Authenticating
-          ?  CircularProgressIndicator()
+          ? CircularProgressIndicator()
           : SingleChildScrollView(
               child: Column(
                 children: <Widget>[
@@ -88,7 +88,7 @@ class _LoginState extends State<Login> {
                       child: Container(
                         decoration: BoxDecoration(
                             color: Colors.lightBlueAccent,
-                           // border: Border.all(color: Colors.white),
+                            // border: Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(25)),
                         child: Padding(
                           padding: EdgeInsets.only(top: 2, bottom: 2),

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class UserServices{
+class UserServices {
   Firestore _firestore = Firestore.instance;
   String collection = "users";
 

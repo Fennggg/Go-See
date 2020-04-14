@@ -121,7 +121,6 @@ class _all_flightState extends State<all_flight> {
       "price": "900",
       "date": "Aug 20 - Aug 22"
     },
-
   ];
 
   @override

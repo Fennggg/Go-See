@@ -24,8 +24,8 @@ class _aboutState extends State<about> {
       body: (const Text.rich(
         TextSpan(
           text: 'Travel Guide APP\n'
-                'Look for differences city\n'
-                'Easy to search',
+              'Look for differences city\n'
+              'Easy to search',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           // default text style
         ),
