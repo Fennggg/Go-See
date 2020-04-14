@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:off_app/pages/home.dart';
+import 'package:off_app/screens/home.dart';
 
 class CityDetail extends StatefulWidget {
   final city_detail_name;

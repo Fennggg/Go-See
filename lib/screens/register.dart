@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:off_app/user/auth.dart';
-import 'package:off_app/pages/home.dart';
-import 'package:off_app/user/login.dart';
+import 'package:off_app/user/authentication.dart';
+import 'package:off_app/screens/home.dart';
+import 'package:off_app/screens/login.dart';
 import 'package:provider/provider.dart';
 
 class Register extends StatefulWidget {

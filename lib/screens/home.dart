@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-import 'package:off_app/T/horizontal_listview.dart';
-import 'package:off_app/pages/about.dart';
-import 'package:off_app/pages/city_detail.dart';
-import 'package:off_app/pages/flight.dart';
-import 'package:off_app/pages/hotel.dart';
-import 'package:off_app/user/auth.dart';
+import 'package:off_app/struture/horizontal_listview.dart';
+import 'package:off_app/screens/about.dart';
+import 'package:off_app/screens/city_detail.dart';
+import 'package:off_app/struture/flight.dart';
+import 'package:off_app/struture/hotel.dart';
+import 'package:off_app/user/authentication.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {

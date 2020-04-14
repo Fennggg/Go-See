@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:off_app/user/auth.dart';
-import 'package:off_app/user/login.dart';
+import 'package:off_app/user/authentication.dart';
+import 'package:off_app/screens/login.dart';
 import 'package:provider/provider.dart';
-import 'package:off_app/pages/home.dart';
+import 'package:off_app/screens/home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,8 +22,8 @@ class ScreensController extends StatelessWidget {
       case Status.Authenticating:
         return Login();
       default:
-        //return Login();
-        return HomePage();
+        return Login();
+        //return HomePage();
     }
   }
 }
