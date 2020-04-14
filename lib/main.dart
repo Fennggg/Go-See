@@ -22,8 +22,8 @@ class ScreensController extends StatelessWidget {
       case Status.Authenticating:
         return Login();
       default:
-        //return Login();
-      return HomePage();
+        return Login();
+      //return HomePage();
     }
   }
 }
