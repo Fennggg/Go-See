@@ -1,7 +1,7 @@
 # Go See App
 
 Travel guide app. 
-Explore the World
+Explore the World. 
 Make it easy to search for different cities. 
 
 
