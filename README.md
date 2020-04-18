@@ -2,7 +2,7 @@
 
 Travel guide app. 
 Explore the World. 
-Make it easy to search for different cities. 
+This make it easy for us to search for different cities. 
 
 
 # Images
